@@ -8,7 +8,8 @@ import { Contact } from '../models/contact.model';
 })
 export class ContactService {
   private readonly http = inject(HttpClient);
-  private readonly apiUrl = 'http://localhost:3000/api/contacts';
+  //private readonly apiUrl = 'http://localhost:3000/api/contacts';
+  private readonly apiUrl = 'http://192.168.49.2:30100/api/contacts';
 
   getAll(): Observable<Contact[]> {
     return this.http.get<Contact[]>(this.apiUrl);
